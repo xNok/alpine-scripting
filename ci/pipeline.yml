@@ -1,0 +1,27 @@
+resources:
+- name: alpine-scripting-source
+  type: git
+  source: 
+    uri: https://github.com/emerald-squad/alpine-scripting.git
+    branch: 'master'
+
+- name: docker-hub
+  type: docker-image
+  source:
+    repository: emeraldsquad/alpine-scripting
+    username: ((docker-hub-username))
+    password: ((docker-hub-password))
+
+jobs:
+- name: publish
+  plan:
+  - aggregate:
+    - get: alpine-scripting-source
+      trigger: true
+  - task: get-version
+    file: alpine-scripting-source/ci/tasks/get-version.yml
+  - put: docker-hub
+    params:
+      build: alpine-scripting-source
+      tag: version/version
+      tag_as_latest: true
