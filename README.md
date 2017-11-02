@@ -4,6 +4,7 @@ Docker image with tools useful for scripting.
 - curl
 - gawk
 - grep
+- jq
 - coreutils
 - sed
 - wget
