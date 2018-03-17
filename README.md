@@ -1,13 +1,3 @@
 Docker image with tools useful for scripting.
 
-- bash
-- bc
-- curl
-- gawk
-- git
-- grep
-- jq
-- coreutils
-- sed
-- wget
-- yaml
+check the ```dockerfile``` for the list of tools
