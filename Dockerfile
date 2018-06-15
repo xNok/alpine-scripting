@@ -11,6 +11,7 @@ RUN apk add --no-cache \
       git \
       grep \
       jq \
+      mysql-client \
       openssh-client \
       postgresql \
       sed \
