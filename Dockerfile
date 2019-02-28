@@ -13,6 +13,7 @@ RUN apk add --no-cache \
       jq \
       mysql-client \
       openssh-client \
+      openssl \
       postgresql \
       sed \
       wget; \
